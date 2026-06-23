@@ -1,0 +1,66 @@
+
+╔══════════════════════════════════════════════════════════════════╗
+║         TELECOM CHURN ANALYSIS — CONSULTING BRIEF               ║
+║         Prepared for: Client Executive Team                     ║
+╚══════════════════════════════════════════════════════════════════╝
+
+SITUATION
+─────────
+A major telecom operator is experiencing a 26.5% annual churn rate
+across its 7,043-customer base. Silent attrition is eroding revenue
+without clear visibility into which customers are at risk or why.
+
+APPROACH
+─────────
+Analysed 7,043 customer records across 20 variables including contract
+type, tenure, service usage, and billing behaviour. Built a predictive
+churn model (XGBoost) achieving AUC-ROC of 0.845 — validated on a
+held-out test set of 1,409 customers.
+
+KEY FINDINGS
+─────────────
+  #1  Contract flexibility is the #1 churn driver
+      Month-to-month customers churn at ~43% vs ~3% on two-year plans.
+      SHAP value: 0.744 — strongest predictor in the model.
+
+  #2  Churn risk is highest in the first 12 months
+      New customers have not yet built switching costs or loyalty.
+      Early intervention window is narrow but high-impact.
+
+  #3  High-spend customers on flexible plans are highest risk
+      Churned customers paid $74/mo vs
+      $61/mo for retained — a $13 gap.
+
+  #4  Customers without Online Security or Tech Support churn more
+      Upselling protective services may reduce churn and increase ARPU.
+
+  #5  Electronic check payment correlates with higher churn
+      Possible proxy for lower engagement / trust in the platform.
+
+RECOMMENDATIONS
+────────────────
+  R1  CONTRACT MIGRATION CAMPAIGN
+      Target month-to-month customers with 10–15% annual plan discount.
+      Projected churn reduction: 8–10% within 6 months.
+
+  R2  90-DAY ONBOARDING PROGRAMME
+      Assign customer success touchpoints at Day 7, 30, and 90.
+      Focus on customers who have not adopted security/support services.
+
+  R3  HIGH-VALUE RETENTION PACKAGES
+      Model identified 200 at-risk customers in test set alone.
+      Personalised offers to this segment protects est. $46,628/yr.
+
+MODEL PERFORMANCE
+──────────────────
+  AUC-ROC  : 0.845   (industry benchmark: >0.80)
+  Accuracy : 80.3%
+  Churners correctly flagged : 200 of 374 (53% recall)
+
+NEXT STEPS
+───────────
+  □  Deploy model to score live customer base monthly
+  □  A/B test retention offers on flagged high-risk segment
+  □  Revisit model quarterly with fresh data
+
+═══════════════════════════════════════════════════════════════════
